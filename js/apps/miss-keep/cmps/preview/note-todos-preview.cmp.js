@@ -1,17 +1,14 @@
 export default {
     template: `
-    <div class="note-todos-preview">
+    <div class="note-todos-preview card">
         <ul>
             <li v-for="(todo, inx) in info.todoList" :key="inx">
                 {{todo.txt}}
             </li>
         </ul>
-        <button @click="$emit('open')">
-            open
-        </button>
-        <button @click="$emit('remove')">
-            remove
-        </button>
+            <button @click.stop="$emit('remove')" title="remove">
+                ✕
+            </button>
   </div>
     `,
     props:{

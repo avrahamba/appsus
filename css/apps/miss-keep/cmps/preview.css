@@ -1,0 +1,30 @@
+.keep-app .card{
+    margin: 5px;
+    cursor: pointer;
+    background-color: lightgoldenrodyellow;
+    border-radius: 20px;
+    padding: 10px;
+    border: solid 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.keep-app .card:hover{
+    margin: 0;
+    padding: 15px;
+}
+
+.keep-app .card .close{
+    text-align: center;
+    bottom: 0;
+}
+.keep-app .card button{
+    all: unset;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: red;
+    border-radius:  999px;
+    border: solid 1px black;
+    text-align: center;
+
+}

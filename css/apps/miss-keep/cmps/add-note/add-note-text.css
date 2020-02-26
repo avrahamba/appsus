@@ -1,1 +1,7 @@
-.add-note-text{}
+.add-note-text{
+    width: min-content;
+}
+        
+.add-note-text textarea{
+    margin-left: 2px;
+}

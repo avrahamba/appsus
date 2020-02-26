@@ -2,7 +2,7 @@ import {noteService} from '../../../../services/miss-keep/notes.service.js';
 
 export default {
     template: `
-    <div ref="note" class="note-video">
+    <div ref="note" class="note-video open-note">
         <input 
         type="text" 
         v-if="edit" 

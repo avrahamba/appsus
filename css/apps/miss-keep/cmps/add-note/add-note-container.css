@@ -2,9 +2,3 @@
     display: flex;
     justify-content: center;
 }
-.add-note-container .link{
-    opacity: 0.5;    
-}
-.add-note-container .link:hover{
-    opacity: 1;    
-}

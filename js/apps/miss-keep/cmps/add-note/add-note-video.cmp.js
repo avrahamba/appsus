@@ -1,3 +1,4 @@
+import {eventBus, EVENT_CLEAR} from '../../../../services/event-bus.service.js';
 export default {
     template:`
     <div class="add-note-video">
@@ -19,6 +20,14 @@ export default {
         },
         created() {
             this.$emit('input',this.info)
+            eventBus.$on(EVENT_CLEAR,()=>{
+                this.info={
+                    type:'txt',
+                    title:'',
+                    txt:'',
+                }
+                this.show=false
+            })
         },
     
 }

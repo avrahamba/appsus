@@ -1,16 +1,13 @@
 export default {
     template: `
-    <div class="note-video-preview">
+    <div class="note-video-preview card">
         <div ref="video">
             <iframe :width="width" :height="height"
                 :src="info.url">
             </iframe> 
         </div>
-        <button @click="$emit('open')">
-            open
-        </button>
-        <button @click="$emit('remove')">
-            remove
+        <button @click.stop="$emit('remove')" title="remove">
+            ✕
         </button>
   </div>
     `,

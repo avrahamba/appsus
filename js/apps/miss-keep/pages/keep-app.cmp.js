@@ -15,7 +15,7 @@ export default {
             <add-note></add-note>
         </div>
     <hr>
-    <div class="card-container">
+    <div class="cards-container">
         <component 
         v-if="notes"
         v-for="(note, inx) in notesPreview" 
@@ -23,7 +23,7 @@ export default {
         :is="note.type" 
         :info="note.info"
         @remove="removeNote(note.id)"
-        @open="openNote(note.id)"
+        @click.native="openNote(note.id)"
         ></component>
     </div>
         <component 

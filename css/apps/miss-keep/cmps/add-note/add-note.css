@@ -1,7 +1,34 @@
 .add-note{
     border: 2px solid black;
-border-radius: 20px;
-padding: 15px;
-background-color: lightgoldenrodyellow;
-max-width: 460px;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: lightgoldenrodyellow;
+    max-width: 460px;
+    display: flex;
+
+}
+.add-note button.link{
+    all: unset;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+.add-note .link{
+    opacity: 0.5;    
+    cursor: pointer;
+    align-self: flex-start;
+}
+.add-note .link:hover{
+    opacity: 1;    
+}
+.add-note input{
+    padding: 5px 0;
+    background: none;
+    border: none;
+}
+.add-note textarea{
+    padding: 5px 0;
+    background: none;
+    border: none;
 }

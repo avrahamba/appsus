@@ -1,1 +1,19 @@
-.add-note-todo{}
+.add-note-todo{
+
+}
+.add-note-todo ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.add-note-todo .add-dec{
+    display: flex;
+    justify-content: space-around;
+}
+
+.add-note-todo button.link{
+    all: unset;
+    display: block;
+    cursor: pointer;
+}

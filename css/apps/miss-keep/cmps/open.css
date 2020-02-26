@@ -1,5 +1,31 @@
-.note-img,.note-todos,.note-video,.note-text{
+.open-note{
     position: fixed;
-    top: 50px;
-    background-color: chocolate;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: lightgoldenrodyellow;
+    border-radius: 25px;
+    padding: 25px;
+    font-size: 1.7em;
+    border: black 2px solid;
+    text-align: center;
+}
+
+.open-note button{
+    all: unset;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius:  999px;
+    border: solid 1px rgb(105, 99, 99);
+    text-align: center;
+    cursor: pointer;
+}
+.open-note .edit{
+    background-color: green;
+}
+.open-note .close{
+    background-color: yellow;
+}
+.open-note .remove{
+    background-color: red;
 }

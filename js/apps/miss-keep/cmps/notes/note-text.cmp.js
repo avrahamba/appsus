@@ -3,7 +3,7 @@ import {noteService} from '../../../../services/miss-keep/notes.service.js';
 
 export default {
     template: `
-    <div class="note-text">
+    <div class="note-text open-note">
         <input 
             type="text" 
             v-if="edit" 
@@ -19,13 +19,13 @@ export default {
         <p v-else>
             {{info.txt}}
         </p>
-        <button @click="startEditOrSave">
+        <button class="edit" @click="startEditOrSave">
             {{txtEdit}}
         </button>
-        <button @click="$emit('close')">
+        <button class="close" @click="$emit('close')">
             Close
         </button>
-        <button @click="$emit('remove')">
+        <button class="remove" @click="$emit('remove')">
             remove
         </button>
     </div>
