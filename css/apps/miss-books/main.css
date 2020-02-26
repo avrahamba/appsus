@@ -1,0 +1,9 @@
+@import './comps/book-add.css';
+@import './comps/book-details.css';
+@import './comps/book-filter.css';
+@import './comps/book-list.css';
+@import './comps/book-preview.css';
+@import './comps/button-add.css';
+@import './comps/star-review.css';
+@import './comps/txt-msg.css';
+@import './comps/user-review.css';

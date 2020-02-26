@@ -1,0 +1,13 @@
+.button-add{
+    width: 15em;
+    background-color: #fff;
+    border: solid 1px #000;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.button-add .plus:hover{
+    cursor: pointer;
+}

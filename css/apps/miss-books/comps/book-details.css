@@ -1,0 +1,35 @@
+
+
+
+.book-details{
+    display: flex;
+    align-items: flex-start;
+}
+
+.book-details img{
+    object-fit: scale-down;
+}
+
+.book-details .text-container{
+    padding: 25px;
+    padding-top: 0;
+    line-height: 1.7em;
+}
+.book-details h2{
+    text-align: center;
+    margin-top: 0;
+}
+.book-details h3{
+    text-align: center;
+    margin-bottom: 2em;
+}
+.book-details .expensive {
+    color: red;
+}
+
+.book-details .cheap {
+    color: green;
+}
+.book-details .text-container img{
+    width: 200px;
+}

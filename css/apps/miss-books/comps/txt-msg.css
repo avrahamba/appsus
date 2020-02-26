@@ -1,0 +1,16 @@
+.txt-msg{
+    padding: 15px;
+    font-size: 2em;
+    background-color: #999;
+    position: fixed;
+    top: 30px;
+    right: 50%;
+    text-align: center;
+}
+
+.txt-msg.secss{
+    background-color: green;
+}
+.txt-msg.unsecss{
+    background-color: red;
+}
