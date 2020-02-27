@@ -22,9 +22,8 @@ export default {
             this.$emit('input',this.info)
             eventBus.$on(EVENT_CLEAR,()=>{
                 this.info={
-                    type:'txt',
-                    title:'',
-                    txt:'',
+                    type:'video',
+                    url:'',
                 }
                 this.show=false
             })

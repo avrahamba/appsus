@@ -43,7 +43,8 @@ export default {
         this.$emit('input',this.info)
         eventBus.$on(EVENT_CLEAR,()=>{
             this.info={
-                type:'txt',
+                type:'img',
+                url:'',
                 title:'',
                 txt:'',
             }

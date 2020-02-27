@@ -1,3 +1,10 @@
 .todo-doed{
     text-decoration: line-through;
 }
+.note-todos ul{
+    text-align: start;
+}
+
+.note-todos .todo-li{
+    cursor: pointer;
+}

@@ -84,7 +84,10 @@ function _addNewNote(info) {
             break;
         case 'todo':
             note.type = 'noteTodos'
-            note.info = { todoList: info.todos.map((todo, inx) => { return { id: inx, txt: todo, do: false } }) }
+            note.info = { todoList: info.todos
+                .filter((todo)=>todo)
+                .map((todo, inx) => { return { id: inx, txt: todo, do: false } }) 
+            }
             break;
     }
     notes.unshift(note)
@@ -115,10 +118,16 @@ function _editExistNote(info) {
     storageService.store(STORAGE_KEY, notes);
 }
 function _editUrlYoutube(url){
-    url = url.substr(url.indexOf('v=') + 2)
-    if (url.indexOf('&') !== -1) {
-        url = url.substr(0, url.indexOf('&'))
+
+    if(url.includes('youtu.be')){
+        url = url.substring(url.lastIndexOf('/') + 1)
+    }else{
+        url = url.substr(url.indexOf('v=') + 2)
+        if (url.indexOf('&') !== -1) {
+            url = url.substr(0, url.indexOf('&'))
+        }
     }
+    console.log('url :', url);
     return `https://www.youtube.com/embed/${url}`
 }
 function getNotes() {

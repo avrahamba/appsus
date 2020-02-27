@@ -1,10 +1,10 @@
-@import './cmps/note-text.css';
+@import './cmps/keep-app.css';
+@import './cmps/add-note/main.css';
 @import './cmps/open.css';
-@import './cmps/preview.css';
+@import './cmps/note-text.css';
 @import './cmps/note-todo.css';
+@import './cmps/preview.css';
 @import './cmps/note-img-prv.css';
 @import './cmps/note-text-prv.css';
 @import './cmps/note-todo-prv.css';
 @import './cmps/note-video-prv.css';
-@import './cmps/keep-app.css';
-@import './cmps/add-note/main.css';

@@ -29,3 +29,6 @@
 .open-note .remove{
     background-color: red;
 }
+.open-note button img{
+    width: 26px;
+}

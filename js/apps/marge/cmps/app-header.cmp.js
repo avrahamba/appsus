@@ -7,6 +7,8 @@ export default {
         
         <router-link to="/miss-keep">Keep App</router-link>|
         
+        <router-link to="/mister-email">Email App</router-link>|
+        
         <router-link to="/about">about</router-link>
     </nav>
     `

@@ -1,0 +1,10 @@
+.email-preview{
+    border: black 1px solid;
+    background-color: blanchedalmond;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.email-preview.is-read{
+    background-color: beige;
+    
+}

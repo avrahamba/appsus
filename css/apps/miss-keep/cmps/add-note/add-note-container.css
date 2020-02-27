@@ -1,4 +1,6 @@
 .add-note-container{
     display: flex;
     justify-content: center;
+    position: relative;
+    height: 65px;
 }

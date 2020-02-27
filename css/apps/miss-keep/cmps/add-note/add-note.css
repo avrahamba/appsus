@@ -5,7 +5,7 @@
     background-color: lightgoldenrodyellow;
     max-width: 460px;
     display: flex;
-
+    position: absolute;
 }
 .add-note button.link{
     all: unset;

@@ -1,4 +1,10 @@
 .note-img-preview{
     text-align: center;
+}
 
+.note-img-preview img{
+    width: 100%;
+}
+.note-img img{
+    max-height: 50vh;
 }

@@ -34,9 +34,27 @@ function makeLorem(length) {
 export const utilService = {
     getRandomInt,
     makeLorem,
-    makeId
+    makeId,
+    timeConverter
 }
 
+function timeConverter(UNIX_timestamp, time = false){
+    var a = new Date(UNIX_timestamp);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    if(year === new Date().getFullYear()){
+        year = ''
+    }
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var sec = a.getSeconds();
+    if(time){
+        return date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    }
+    return date + ' ' + month + ' ' + year;
+  }
 
 function _getRandChar() {
     var LETTERS = 'abcdefghijklmnopqrstuvwxyz';

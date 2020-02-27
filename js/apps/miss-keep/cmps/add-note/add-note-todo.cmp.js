@@ -12,12 +12,6 @@ export default {
                 @focus="focusTodo(inx)"
             >
         </li>
-        <li>
-            <div class="add-dec">
-                <button class="link" @click="add">➕</button>
-                <button class="link" @click="dec">➖</button>
-            </div>
-        </li>
     </ul>
     
     </div>
@@ -26,9 +20,7 @@ export default {
         return {
             info:{
                 type:'todo',
-                todos:[
-                    ''
-                ]
+                todos:['']
             }
         }
     },
@@ -47,11 +39,9 @@ export default {
     created() {
         eventBus.$on(EVENT_CLEAR,()=>{
             this.info={
-                type:'txt',
-                title:'',
-                txt:'',
+                type:'todo',
+                todos:['']
             }
-            this.show=false
         })
     },
 }
