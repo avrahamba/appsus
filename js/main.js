@@ -8,7 +8,9 @@ new Vue({
     el: '#app',
     template: `
         <section class="my-app">
-            <app-header></app-header>
+            <header>
+                <app-header></app-header>
+            </header>
             <router-view></router-view>
             <txt-msg></txt-msg>
         </section>

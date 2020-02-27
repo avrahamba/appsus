@@ -1,15 +1,25 @@
-import emailStatus from './email-status.cmp.js';
 export default {
     template:`
-    <section class="email-menu">
-    <router-link to="/mister-email/compose">
-        Compose +
-    </router-link>
-        <email-status></email-status>
+    <nav class="email-menu">
+        <router-link to="/mister-email/compose" exact>
+            Compose
+        </router-link>
+        <router-link to="/mister-email" exact>
+            Inbox
+        </router-link>
+        <router-link to="/mister-email/deleted" exact>
+            Starred
+        </router-link>
+        <router-link to="/mister-email/0" exact>
+            Deleted Mail
+        </router-link>
+        <router-link to="/mister-email/1" exact>
+            Sent Mail
+        </router-link>
+        <router-link to="/mister-email/2" exact>
+            Drafts
+        </router-link>
 
-    </section>
+    </nav>
     `,
-    components:{
-        emailStatus
-    }
 }

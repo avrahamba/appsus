@@ -3,32 +3,27 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: lightgoldenrodyellow;
-    border-radius: 25px;
-    padding: 25px;
-    font-size: 1.7em;
-    border: black 2px solid;
+    background-color: #e1f2fb;
+    padding: 15px;
+    font-size: 1.3em;
     text-align: center;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.6), 0px 2px 2px 0px rgba(0, 0, 0, 0.34), 0px 1px 5px 0px rgba(0, 0, 0, 0.22) !important;
 }
 
 .open-note button{
     all: unset;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius:  999px;
-    border: solid 1px rgb(105, 99, 99);
     text-align: center;
     cursor: pointer;
 }
 .open-note .edit{
-    background-color: green;
 }
 .open-note .close{
-    background-color: yellow;
+    margin: 15px;
 }
-.open-note .remove{
-    background-color: red;
-}
-.open-note button img{
-    width: 26px;
+
+.open-note input,.open-note textarea{
+    display: block;
+
+    background: none;
+    border: none;
 }

@@ -105,6 +105,7 @@ function _editExistNote(info) {
             break
         case 'noteTodos':
             currNote.info = info.info
+            currNote.info.todoList = currNote.info.todoList.filter((todo)=>todo.txt)
             break
         case 'noteImg':
             currNote.info.title = info.info.title
@@ -147,4 +148,5 @@ function setTodo(noteId,inx){
     const note = notes.find(note => note.id === noteId);
     note.info.todoList[inx].do=!note.info.todoList[inx].do
     storageService.store(STORAGE_KEY, notes);
+    return Promise.resolve(note)
 }

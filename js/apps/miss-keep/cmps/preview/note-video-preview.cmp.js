@@ -7,7 +7,7 @@ export default {
             </iframe> 
         </div>
         <button @click.stop="$emit('remove')" title="remove">
-            ✕
+        <i class="fa fa-trash"></i>
         </button>
   </div>
     `,

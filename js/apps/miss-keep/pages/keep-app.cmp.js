@@ -14,7 +14,6 @@ export default {
         <div class="add-note-container">
             <add-note></add-note>
         </div>
-    <hr>
     <div class="cards-container">
         <component 
         v-if="notes"

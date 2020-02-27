@@ -26,6 +26,7 @@ export default {
                 <option value="light">Light</option>
             </select>
         </label>
+        <router-link to="/books/add">Add Book</router-link>
     </div>
 `,
     props: ['filterBy'],

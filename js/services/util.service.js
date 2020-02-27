@@ -53,8 +53,12 @@ function timeConverter(UNIX_timestamp, time = false){
     if(time){
         return date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
     }
-    return date + ' ' + month + ' ' + year;
-  }
+    const now = new Date()
+    if(date!==now.getDate()||a.getMonth()!==now.getMonth()||year!=='') {
+           return date + ' ' + month + ' ' + year;
+    }
+    return hour + ':' + min + ':' + sec ; 
+}
 
 function _getRandChar() {
     var LETTERS = 'abcdefghijklmnopqrstuvwxyz';

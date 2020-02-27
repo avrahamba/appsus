@@ -1,0 +1,15 @@
+.email-menu{
+    display: flex;
+    flex-direction: column;
+    gap:0.3em;
+}
+.email-menu>*{
+    padding: 0.5em;
+    text-decoration: none;
+    color: #003571;
+}
+.email-menu .router-link-active{
+    background-color: #4596d175;
+    border-end-end-radius: 999px;
+    border-start-end-radius: 999px;
+}

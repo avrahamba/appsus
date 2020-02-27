@@ -10,6 +10,7 @@ import keepApp from './apps/miss-keep/pages/keep-app.cmp.js';
 import misterEmail from './apps/mister-email/pages/email-app.cmp.js';
 import emailList from './apps/mister-email/pages/email-list.cmp.js';
 import emailCompose from './apps/mister-email/pages/email-compose.cmp.js';
+import emailDetails from './apps/mister-email/pages/email-details.cmp.js';
 
 const routes = [
     {path: '/', component: homePage},
@@ -23,6 +24,7 @@ const routes = [
     {path: '/mister-email', component: misterEmail, children:[
       {path: '', component: emailList},
       {path: 'compose', component: emailCompose},  
+      {path: ':id', component: emailDetails},  
     ]},
     {path: '/about', component: aboutPage},
 ]

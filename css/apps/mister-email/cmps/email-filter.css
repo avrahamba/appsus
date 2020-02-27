@@ -1,0 +1,35 @@
+.email-filter{
+    display: flex;
+    justify-content: space-between;
+    background-color: #4596d175;
+}
+.email-filter select{
+    all: unset;
+    border: none;
+    margin: 2px;
+    margin-left: 0;
+    background: #f1f9f9;
+    opacity: 0.7;
+    transition: 0.3s;
+    width: 7em;
+    padding-left: 0.5em;
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+}
+.filter-container{
+    display: flex;
+}
+.email-filter select:focus{
+    opacity: 1;
+}
+.email-filter input{
+    border: none;
+    margin: 2px;
+    background: #f1f9f9;
+    opacity: 0.7;
+    transition: 0.3s;
+    padding-left: 2em;
+}
+.email-filter input:focus{
+    opacity: 1;
+}

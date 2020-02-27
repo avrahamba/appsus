@@ -51,7 +51,7 @@ function loadBooks(){
 
 function addBook(book){
   loadBooks();
-  booksDB.push(book)
+  booksDB.unshift(book)
   storageService.store(BOOKS_KEY, booksDB)
   return Promise.resolve(book)
 }
@@ -60,7 +60,7 @@ function createBooks() {
     var books = []
     for (let index = 0; index < 20; index++) {
         var book = createBook()
-        books.push(book)
+        books.unshift(book)
 
     }
     return books;

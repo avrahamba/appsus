@@ -1,15 +1,26 @@
 export default {
     template:`
-    <nav>
-        <router-link to="/">home</router-link>|
-        <router-link to="/books">books</router-link>|
-        <router-link to="/books/add">Add Book</router-link>|
+    <nav class="app-header">
         
-        <router-link to="/miss-keep">Keep App</router-link>|
-        
-        <router-link to="/mister-email">Email App</router-link>|
-        
-        <router-link to="/about">about</router-link>
+        <router-link class="logo" to="/" exact>
+        <img src="./img/LOGO.png">
+        APPSUS
+        </router-link>
+        <!-- <div class="logo">APPSUS</div> -->
+        <ul>
+            <li v-for="(link, index) in links" :key="index">
+                <router-link class="router-link" :to="link.to">{{link.text}}</router-link>
+            </li>
+        </ul>
     </nav>
-    `
+    `,
+    data() {
+        return {
+            links:[
+                {to:'/books',text:'Books'},
+                {to:'/miss-keep',text:'Keep App'},
+                {to:'/mister-email',text:'Email App'},
+            ]
+        }
+    },
 }

@@ -17,3 +17,6 @@
     display: block;
     cursor: pointer;
 }
+.note-todos input{
+    font-size: 1em;
+}

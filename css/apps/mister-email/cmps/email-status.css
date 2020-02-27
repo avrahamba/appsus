@@ -1,0 +1,10 @@
+.email-status{
+    display: flex;
+
+}
+.email-status div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 1.5em;
+}
