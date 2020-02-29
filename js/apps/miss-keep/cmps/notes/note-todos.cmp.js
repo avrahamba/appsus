@@ -1,4 +1,6 @@
 import {noteService} from '../../../../services/miss-keep/notes.service.js';
+import {emailService} from '../../../../services/mister-email/email.service.js';
+
 
 export default {
     template: `
@@ -42,17 +44,20 @@ export default {
             </button>
         </div>
         <div class="btns">
+            <button class="send" @click="sendAsMail" :title="editSave">
+                <i class="fa fa-send"></i>
+            </button>
             <button class="edit" @click="startEditOrSave" :title="editSave">
-            <i class="fa" :class="srcImgEdit"></i>
+                <i class="fa" :class="srcImgEdit"></i>
             </button>
             <button class="close" @click="$emit('close')" title="close">
-            <i class="fa fa-close"></i>
+                <i class="fa fa-close"></i>
             </button>
             <button @click.stop="pin" title="pin">
-                    <i class="fa fa-map-pin"></i>
+                <i class="fa fa-map-pin"></i>
             </button>
             <button class="remove" @click="$emit('remove')" title="remove">
-            <i class="fa fa-trash"></i>
+                <i class="fa fa-trash"></i>
             </button>
         </div> 
   </div>
@@ -103,6 +108,11 @@ export default {
         pin(){
             noteService.setPin(this.id)
             this.colorOpen = !this.colorOpen
+        },
+        sendAsMail(){
+            const body = this.info.todoList.map((todo,inx)=>`${inx+1}. ${todo.txt}\n`).join('')
+            emailService.saveDraft({subject:this.info.title, body})
+            .then(draftId=>this.$router.push(`/mister-email/compose/${draftId}`))
         }
     },
 

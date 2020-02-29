@@ -127,7 +127,7 @@ function saveDraft(email){
     loadDrafts();
     drafts.unshift({id: utilService.makeId(), subject: email.subject,send: email.sendTo, body: email.body})
     storageService.store(STORAGE_KEY_DRAFTS,drafts);
-    return Promise.resolve(drafts) 
+    return Promise.resolve(drafts[0].id) 
 }
 
 function deleteDraft(draftId){

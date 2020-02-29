@@ -1,5 +1,5 @@
 import {noteService} from '../../../../services/miss-keep/notes.service.js';
-
+import {emailService} from '../../../../services/mister-email/email.service.js';
 
 export default {
     template: `
@@ -44,6 +44,9 @@ export default {
         </div>
         <div class="btns">
 
+            <button class="send" @click="sendAsMail" :title="editSave">
+                <i class="fa fa-send"></i>
+            </button>
             <button class="edit" @click="startEditOrSave" :title="editSave">
                 <i class="fa" :class="srcImgEdit"></i>
             </button>
@@ -99,6 +102,10 @@ export default {
         pin(){
             noteService.setPin(this.id)
             this.colorOpen = !this.colorOpen
+        },
+        sendAsMail(){
+            emailService.saveDraft({subject:this.infoCopy.title, body:this.infoCopy.txt})
+            .then(draftId=>this.$router.push(`/mister-email/compose/${draftId}`))
         }
     },
 
