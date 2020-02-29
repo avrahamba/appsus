@@ -37,7 +37,7 @@ nav.app-header img{
 nav.app-header .router-link{
     height: 100%;
     display: flex;
-    min-width: 6em;
+    min-width: 8em;
     text-align: center;
     flex-direction: column;
     justify-content: center;

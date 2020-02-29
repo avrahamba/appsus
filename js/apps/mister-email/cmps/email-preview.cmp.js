@@ -8,10 +8,18 @@ export default {
     :class="{'is-read': email.isRead, 'isOpen': isOpen}" 
     class="email-preview">
         <section>
-
-            <span class="subject">{{email.subject}}</span>
+            <span>
+                <span class="subject">{{email.subject}}</span>
+                <span>{{email.send}}</span>
+            </span>
             
             <div v-if="hover" class="btns">
+                <button @click.stop="setStar" :class="starClass">
+                    <i class="fa fa-star"></i>
+                </button>
+                <button v-if="email.isDeleted" @click.stop="restor">
+                    <i class="fa fa-arrow-up"></i>
+                </button>
                 <button @click.stop="deleteEmail">
                     <i class="fa fa-trash"></i>
                 </button>
@@ -48,6 +56,9 @@ export default {
         },
         shortBody(){
             return `${this.email.body.substr(0,50)}${(this.email.body.length>49)?'...':''}`;
+        },
+        starClass(){
+            if(this.email.star) return 'star-active'
         }
     },
     methods: {
@@ -60,6 +71,12 @@ export default {
         },
         openEmail(){
             this.$router.push(`/mister-email/${this.email.id}`)
+        },
+        setStar(){
+            emailService.setStar(this.email.id)
+        },
+        restor(){
+            emailService.restorEmail(this.email.id)
         }
     },
 }

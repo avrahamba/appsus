@@ -1,8 +1,10 @@
 .keep-app .card{
+    position: relative;
     margin: 0 0 15px ;
     cursor: pointer;
     background-color: #e1f2fb;
     padding: 10px;
+    padding-bottom: 35px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,13 +21,14 @@
     text-align: center;
     bottom: 0;
 }
+.keep-app .card .btns{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
 .keep-app .card button{
     all: unset;
     height: 1.5em;
     width: 1.5em;
-    /* background-color: red;
-    border-radius:  999px;
-    border: solid 1px black; */
     text-align: center;
-
 }

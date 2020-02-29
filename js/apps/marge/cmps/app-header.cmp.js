@@ -17,9 +17,9 @@ export default {
     data() {
         return {
             links:[
-                {to:'/books',text:'Books'},
-                {to:'/miss-keep',text:'Keep App'},
-                {to:'/mister-email',text:'Email App'},
+                {to:'/books',text:'Miss Books'},
+                {to:'/miss-keep',text:'Miss Keep'},
+                {to:'/mister-email',text:'Mister Email'},
             ]
         }
     },

@@ -1,9 +1,18 @@
 .email-details{
-background-color: #f1f9f9;
-padding: 10px;
-box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.6), 0px 2px 2px 0px rgba(0, 0, 0, 0.34), 0px 1px 5px 0px rgba(0, 0, 0, 0.22) !important;
+    position: relative;
+    background-color: #f1f9f9;
+    padding: 10px;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.6), 0px 2px 2px 0px rgba(0, 0, 0, 0.34), 0px 1px 5px 0px rgba(0, 0, 0, 0.22) !important;
 }
 
+.email-details .btn{
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
 .email-details button{
     cursor: pointer;
     background: none;
@@ -11,4 +20,8 @@ box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.6), 0px 2px 2px 0px rgba(0, 0, 0, 0
 }
 .email-details h2{
     border-bottom: solid 3px #003571;
+}
+.email-details h3{
+
+    border-bottom: solid 1px #003571;
 }

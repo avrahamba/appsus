@@ -5,3 +5,6 @@
 @import './cmps/email-status.css';
 @import './cmps/email-list.css';
 @import './cmps/email-details.css';
+@import './cmps/email-compose.css';
+@import './cmps/draft-preview.css';
+@import './cmps/draft-list.css';

@@ -7,7 +7,9 @@ export const noteService = {
     getNotes,
     getNoteById,
     removeNote,
-    setTodo
+    setTodo,
+    setColor,
+    setPin
 }
 
 
@@ -29,6 +31,8 @@ function createNotes() {
             info: {
                 title: 'title test',
                 txt: 'test',
+                color: '#c6f2c9',
+                pined: true
             }
         },
         {
@@ -37,7 +41,9 @@ function createNotes() {
             info: {
                 url: 'https://files.geektime.co.il/wp-content/uploads/2020/02/soccer-1582703061-768x576.jpg',
                 title: 'test title',
-                txt: 'text'
+                txt: 'text',
+                color: '#e1f2fb',
+                pined: false
             }
         },
         {
@@ -47,7 +53,9 @@ function createNotes() {
                 todoList: [
                     { id: 0, txt: 'test1', do: false },
                     { id: 1, txt: 'test2', do: false },
-                ]
+                ],
+                color: '#e1f2fb',
+                pined: false
 
             }
         },
@@ -55,7 +63,9 @@ function createNotes() {
             type: 'noteVideo',
             id: utilService.makeId(),
             info: {
-                url: 'https://www.youtube.com/embed/qhehT0uYySk'
+                url: 'https://www.youtube.com/embed/qhehT0uYySk',
+                color: '#e1f2fb',
+                pined: false
             }
         },
     ]
@@ -71,22 +81,23 @@ function _addNewNote(info) {
     switch (info.type) {
         case 'txt':
             note.type = 'noteText'
-            note.info = { txt: info.txt, title: info.title }
+            note.info = { txt: info.txt, title: info.title, pined:false }
             break;
         case 'img':
             note.type = 'noteImg'
-            note.info = { url: info.url, title: info.title, txt:info.txt}
+            note.info = { url: info.url, title: info.title, txt:info.txt, pined:false}
             break;
         case 'video':
             note.type = 'noteVideo'
             const url =  _editUrlYoutube(info.url);
-            note.info = { url }
+            note.info = { url, pined:false }
             break;
         case 'todo':
             note.type = 'noteTodos'
             note.info = { todoList: info.todos
                 .filter((todo)=>todo)
-                .map((todo, inx) => { return { id: inx, txt: todo, do: false } }) 
+                .map((todo, inx) => { return { id: inx, txt: todo, do: false } }),
+                pined:false
             }
             break;
     }
@@ -94,7 +105,6 @@ function _addNewNote(info) {
     storageService.store(STORAGE_KEY, notes);
 }
 
-//TODO
 function _editExistNote(info) {
     console.log('info :', info);
     let currNote = notes.find((note)=>note.id===info.id)
@@ -147,6 +157,20 @@ function removeNote(noteId) {
 function setTodo(noteId,inx){
     const note = notes.find(note => note.id === noteId);
     note.info.todoList[inx].do=!note.info.todoList[inx].do
+    storageService.store(STORAGE_KEY, notes);
+    return Promise.resolve(note)
+}
+
+function setColor(noteId,color){
+    const note = notes.find(note => note.id === noteId);
+    note.info.color = color
+    storageService.store(STORAGE_KEY, notes);
+    return Promise.resolve(note)
+}
+
+function setPin(noteId){
+    const note = notes.find(note => note.id === noteId);
+    note.info.pined = !note.info.pined;
     storageService.store(STORAGE_KEY, notes);
     return Promise.resolve(note)
 }

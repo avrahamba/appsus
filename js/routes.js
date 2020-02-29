@@ -11,6 +11,9 @@ import misterEmail from './apps/mister-email/pages/email-app.cmp.js';
 import emailList from './apps/mister-email/pages/email-list.cmp.js';
 import emailCompose from './apps/mister-email/pages/email-compose.cmp.js';
 import emailDetails from './apps/mister-email/pages/email-details.cmp.js';
+import emailStarred from './apps/mister-email/pages/email-starred.cmp.js';
+import emailDeleted from './apps/mister-email/pages/email-deleted.cmp.js';
+import emailDraftList from './apps/mister-email/pages/draft-list.cmp.js';
 
 const routes = [
     {path: '/', component: homePage},
@@ -23,7 +26,11 @@ const routes = [
     
     {path: '/mister-email', component: misterEmail, children:[
       {path: '', component: emailList},
-      {path: 'compose', component: emailCompose},  
+      {path: 'compose/:id?', component: emailCompose},  
+      {path: 'starred', component: emailStarred},  
+      {path: 'deleted', component: emailDeleted},  
+      {path: 'sent', component: emailList},  
+      {path: 'drafts', component: emailDraftList},  
       {path: ':id', component: emailDetails},  
     ]},
     {path: '/about', component: aboutPage},
