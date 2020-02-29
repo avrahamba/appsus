@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     background-color: #4596d175;
+    padding-right: 1.125em;
 }
 .email-filter select{
     all: unset;
@@ -29,7 +30,7 @@
     opacity: 0.7;
     transition: 0.3s;
     padding-left: 2em;
-    width: 11em;
+    max-width: 11em;
 }
 .email-filter input:focus{
     opacity: 1;

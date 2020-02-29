@@ -81,22 +81,23 @@ function _addNewNote(info) {
     switch (info.type) {
         case 'txt':
             note.type = 'noteText'
-            note.info = { txt: info.txt, title: info.title, pined:false }
+            note.info = { txt: info.txt, title: info.title, color:'#e1f2fb', pined:false }
             break;
         case 'img':
             note.type = 'noteImg'
-            note.info = { url: info.url, title: info.title, txt:info.txt, pined:false}
+            note.info = { url: info.url, title: info.title, color:'#e1f2fb', txt:info.txt, pined:false}
             break;
         case 'video':
             note.type = 'noteVideo'
             const url =  _editUrlYoutube(info.url);
-            note.info = { url, pined:false }
+            note.info = { url, color:'#e1f2fb', pined:false }
             break;
         case 'todo':
             note.type = 'noteTodos'
             note.info = { todoList: info.todos
                 .filter((todo)=>todo)
                 .map((todo, inx) => { return { id: inx, txt: todo, do: false } }),
+                color:'#e1f2fb', 
                 pined:false
             }
             break;

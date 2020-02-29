@@ -26,13 +26,13 @@ export default {
                 </button>
             </template>  
             <button @click.stop="colorSet" v-else >
-                <i class="fa fa-tint"></i>
+                <i class="fa fa-paint-brush"></i>
             </button>
             <button @click.stop="pin" title="pin">
                 <i class="fa fa-map-pin"></i>
             </button>
             <button @click.stop="$emit('remove')" title="remove">
-            <i class="fa fa-paint-brush"></i>
+            <i class="fa fa-trash"></i>
             </button>
   </div>
   </div>

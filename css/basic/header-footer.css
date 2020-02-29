@@ -113,6 +113,7 @@ nav.app-header .router-link-active h1{
     }
     .open-bar header{
         height: fit-content;
+        height: -moz-fit-content;
     }
     .open-bar nav.app-header{
         flex-direction: column;    
