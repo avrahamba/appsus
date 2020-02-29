@@ -15,28 +15,30 @@ export default {
             <add-note></add-note>
         </div>
     <div class="cards-container pined">
-        <component 
-        v-if="notes"
-        v-for="(note, inx) in notesPreviewPined" 
-        :key="inx" 
-        :is="note.type" 
-        :info="note.info"
-        :id="note.id"
-        @remove="removeNote(note.id)"
-        @click.native="openNote(note.id)"
-        ></component>
+        <div class="card-outside" v-for="(note, inx) in notesPreviewPined" >
+            <component 
+            v-if="notes"
+            :key="inx" 
+            :is="note.type" 
+            :info="note.info"
+            :id="note.id"
+            @remove="removeNote(note.id)"
+            @click.native="openNote(note.id)"
+            ></component>
+        </div>
     </div>
     <div class="cards-container Unpined">
-        <component 
-        v-if="notes"
-        v-for="(note, inx) in notesPreviewUnpined"
-        :key="inx" 
-        :is="note.type" 
-        :info="note.info"
-        :id="note.id"
-        @remove="removeNote(note.id)"
-        @click.native="openNote(note.id)"
-        ></component>
+        <div class="card-outside" v-for="(note, inx) in notesPreviewUnpined">
+            <component 
+            v-if="notes"
+           :key="inx" 
+            :is="note.type" 
+            :info="note.info"
+            :id="note.id"
+            @remove="removeNote(note.id)"
+            @click.native="openNote(note.id)"
+            ></component>
+        </div>
     </div>
         <component 
         v-if="activeNote"

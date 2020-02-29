@@ -61,7 +61,6 @@ export default {
         },
         pin(){
             noteService.setPin(this.id)
-            this.colorOpen = !this.colorOpen
         }
     },
 }

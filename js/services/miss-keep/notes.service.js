@@ -71,8 +71,8 @@ function createNotes() {
     ]
 }
 function saveNote(info) {
-    if (info.id) return _editExistNote(info)
-    return _addNewNote(info)
+    if (info.id) return Promise.resolve(_editExistNote(info))
+    return Promise.resolve(_addNewNote(info))
 }
 function _addNewNote(info) {
 

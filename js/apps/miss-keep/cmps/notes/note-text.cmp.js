@@ -101,7 +101,6 @@ export default {
         },
         pin(){
             noteService.setPin(this.id)
-            this.colorOpen = !this.colorOpen
         },
         sendAsMail(){
             emailService.saveDraft({subject:this.infoCopy.title, body:this.infoCopy.txt})

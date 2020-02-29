@@ -30,7 +30,10 @@
 }
 .draft-preview .btns{
     display: flex;
-    gap: 15px;
+}
+.draft-preview .btns>*{
+    margin-left:15px;
+
 }
 .draft-preview .btns i{
     height: 20px;

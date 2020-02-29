@@ -17,15 +17,24 @@
     cursor: pointer;
 }
 .open-note .color-btns{
-    gap: 10px;
     display: flex;
     justify-content: center;
 }
+.open-note .color-btns *{
+    margin-left: 10px;
+}
+.open-note .color-btns *:first-child{
+    margin-left: 0;
+}
 .open-note .btns{
-    gap: 18px;
     display: flex;
     justify-content: center;
-
+}
+.open-note .btns *{
+    margin-left: 18px;
+}
+.open-note .btns *:first-child{
+    margin-left: 0;
 }
 .open-note input,.open-note textarea{
     display: block;

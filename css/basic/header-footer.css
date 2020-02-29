@@ -20,7 +20,7 @@ nav.app-header>ul{
     list-style: none;
     display: flex;  
     margin: 0;
-
+padding: 0;
 }
 .logo{
     margin-left: 10px;
@@ -47,4 +47,34 @@ nav.app-header .router-link{
 nav.app-header .router-link-active{
     color:#f8981d;
     border-bottom: 4px solid #f8981d;
+}
+
+.bars{
+    display: none;
+}
+
+@media (max-width: 650px){
+    nav.app-header .router-link,nav.app-header .logo{
+        display: none;
+    }
+    nav.app-header .bars i{
+        color: #003571;
+    }
+    nav.app-header .bars{
+        height: 100%;
+        display: flex;
+        min-width: 8em;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        text-decoration: none;
+        color: #003571;
+        font-size: 3em;
+    }
+    nav.app-header{
+        justify-content: center;
+    }
+    .logo a:visited{
+        color: #003571;
+    }
 }

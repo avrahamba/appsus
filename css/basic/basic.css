@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    /* background-color: #f1f9f9; */
+}
+html{
+    font-family: 'Lato' ;
+    color: #003571;
+}
+h1{
+    all: unset;
+    color: #003571;
+}
+ul{
+    list-style: url;
+}
+
+i{
+    color:#333;
+}
+textarea {
+    resize: none;
+}
+p{
+    white-space: pre-line;
+}
+
+h2{
+    font-weight: 700;
+}

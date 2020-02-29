@@ -1,20 +1,2 @@
+@import './basic.css';
 @import './header-footer.css';
-body {
-    margin: 0;
-    /* background-color: #f1f9f9; */
-}
-html{
-    font-family: 'Lato' ;
-    color: #003571;
-}
-h1{
-    font-size: 2.5em;
-    text-align: center;
-}
-ul{
-    list-style: url;
-}
-
-i{
-    color:#333;
-}

@@ -29,7 +29,7 @@ export default {
         
         
         <section v-if="isOpen">
-            <p>
+            <p class="body">
                 {{shortBody}}
             </p>
             <div class="rigth">

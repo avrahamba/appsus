@@ -11,12 +11,12 @@
     bottom: 15px;
     display: flex;
     justify-content: end;
-    gap: 15px;
 }
 .email-details button{
     cursor: pointer;
     background: none;
     border: none;
+    margin-left: 15px;
 }
 .email-details h2{
     border-bottom: solid 3px #003571;

@@ -2,8 +2,8 @@
     column-count: 5;
     column-gap:15px;
     padding: 25px;
+    break-inside: avoid-column;
 }
-
 @media (max-width:1080px){
     .keep-app>.cards-container{
     column-count: 4;

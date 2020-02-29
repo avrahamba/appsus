@@ -107,7 +107,6 @@ export default {
         },
         pin(){
             noteService.setPin(this.id)
-            this.colorOpen = !this.colorOpen
         },
         sendAsMail(){
             const body = this.info.todoList.map((todo,inx)=>`${inx+1}. ${todo.txt}\n`).join('')

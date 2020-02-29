@@ -32,11 +32,14 @@
 }
 .email-preview .btns{
     display: flex;
-    gap: 15px;
 }
 .email-preview .btns i{
     height: 20px;
+    margin-left: 15px;
 }
 .email-preview .star-active i{
     color: gold;
+}
+.email-preview .body{
+    padding-inline-start: 15px;
 }

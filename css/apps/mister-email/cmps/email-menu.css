@@ -1,9 +1,9 @@
 .email-menu{
     display: flex;
     flex-direction: column;
-    gap:0.3em;
 }
 .email-menu>*{
+    margin-bottom:0.3em;
     padding: 0.5em;
     text-decoration: none;
     color: #003571;
@@ -12,4 +12,6 @@
     background-color: #4596d175;
     border-end-end-radius: 999px;
     border-start-end-radius: 999px;
+    border-bottom-right-radius: 999px;
+    border-top-right-radius: 999px;
 }
