@@ -1,5 +1,5 @@
 
-.email-list ul{
+.email-list ul,.email-starred ul,.email-deleted ul{
     list-style: none;
     margin: 0;
     padding: 0;

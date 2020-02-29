@@ -8,3 +8,10 @@
     flex-direction: column;
     margin-left: 1.5em;
 }
+
+@media (max-width:650px){
+    .email-status{
+        flex-direction: column;
+        font-size: 0.8em;
+    }
+}

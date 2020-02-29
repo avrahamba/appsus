@@ -1,7 +1,10 @@
 export default {
     template:`
-    <nav class="app-header">
+    <nav class="app-header" @click="closeBar">
         
+        <div class="bars" @click.stop="openBar">
+            <i class="fa fa-bars"></i>
+        </div>
         <router-link class="logo" to="/" exact>
             <img src="./img/LOGO.png">
             <h1>APPSUS</h1> 
@@ -10,9 +13,6 @@ export default {
         <ul>
             <li v-for="(link, index) in links" :key="index">
                 <router-link class="router-link" :to="link.to">{{link.text}}</router-link>
-            </li>
-            <li class="bars" @click="">
-                <i class="fa fa-bars"></i>
             </li>
         </ul>
         
@@ -25,6 +25,14 @@ export default {
                 {to:'/miss-keep',text:'Miss Keep'},
                 {to:'/mister-email',text:'Mister Email'},
             ]
+        }
+    },
+    methods: {
+        openBar(){
+            document.body.classList.toggle('open-bar')
+        },
+        closeBar(){
+            document.body.classList.remove('open-bar')
         }
     },
 }

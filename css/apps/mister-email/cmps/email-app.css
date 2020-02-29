@@ -17,3 +17,10 @@
     grid-row: 2 / -1;
 }
 
+@media (max-width:650px){
+    .email-app{
+        grid-template-columns: 1fr;
+        grid-template-rows: 2.2em 1fr 1fr;
+        gap:5;
+    }
+}

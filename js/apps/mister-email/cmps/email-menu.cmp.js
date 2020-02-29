@@ -3,27 +3,29 @@ export default {
     <nav class="email-menu">
         <router-link to="/mister-email/compose">
             <i class="fa fa-plus"></i>
-            Compose
+            <div class="txt">
+                Compose
+            </div>
         </router-link>
         <router-link to="/mister-email" exact>
             <i class="fa fa-inbox"></i>
-            Inbox
+            <div class="txt">Inbox</div>
         </router-link>
         <router-link to="/mister-email/starred" exact>
             <i class="fa fa-star"></i>
-            Starred
+            <div class="txt">Starred</div>
         </router-link>
         <router-link to="/mister-email/deleted" exact>
             <i class="fa fa-trash"></i>
-            Deleted Mail
+            <div class="txt">Deleted Mail</div>
         </router-link>
         <router-link to="/mister-email/sent" exact>
             <i class="fa fa-send"></i>
-            Sent Mail
+            <div class="txt">Sent Mail</div>
         </router-link>
         <router-link to="/mister-email/drafts" exact>
             <i class="fa fa-edit"></i>
-            Drafts
+            <div class="txt">Drafts</div>
         </router-link>
     </nav>
     `,

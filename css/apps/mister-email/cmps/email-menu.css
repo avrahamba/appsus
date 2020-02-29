@@ -7,6 +7,11 @@
     padding: 0.5em;
     text-decoration: none;
     color: #003571;
+    display: flex;
+    flex-direction: row;
+}
+.email-menu i{
+    margin-right: 0.5em;
 }
 .email-menu .router-link-active{
     background-color: #4596d175;
@@ -14,4 +19,24 @@
     border-start-end-radius: 999px;
     border-bottom-right-radius: 999px;
     border-top-right-radius: 999px;
+}
+
+@media (max-width:650px){
+    .email-menu{
+        flex-direction: row;
+    }   
+
+    .email-menu .router-link-active{
+        background-color: #4596d175;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .email-menu>*{
+        flex-direction: column;
+        text-align: center;
+    }
+    .email-menu i{
+        margin-right: 0;
+    }
+    
 }
