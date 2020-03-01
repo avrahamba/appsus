@@ -5,17 +5,20 @@ export default {
     <section @click="openClose" 
     @mouseover="hover = true"
     @mouseleave="hover = false"
-    :class="{'is-read': email.isRead, 'isOpen': isOpen}" 
+    :class="{'is-read': email.isRead, 'is-open': isOpen}" 
     class="email-preview">
-        <section>
+        <section class="title-mail">
             <span>
+                <button @click.stop="setStar" :class="starClass">
+                    <i class="fa fa-star"></i>
+                </button>
                 <span class="subject">{{email.subject}}</span>
                 <span>{{email.send}}</span>
             </span>
             
             <div v-if="hover" class="btns">
-                <button @click.stop="setStar" :class="starClass">
-                    <i class="fa fa-star"></i>
+                <button @click.stop="openEmail">
+                    <i class="fa fa-expand"></i>
                 </button>
                 <button v-if="email.isDeleted" @click.stop="restor">
                     <i class="fa fa-arrow-up"></i>
@@ -28,16 +31,10 @@ export default {
         </section>
         
         
-        <section v-if="isOpen">
+        <section class="body-mail" v-if="isOpen">
             <p class="body">
                 {{shortBody}}
             </p>
-            <div class="rigth">
-
-                <button @click.stop="openEmail">
-                    <i class="fa fa-expand"></i>
-                </button>
-            </div>
         </section>  
     </section>
     `,

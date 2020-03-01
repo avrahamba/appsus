@@ -2,6 +2,7 @@
     display: flex;
 
 }
+
 .email-status div{
     display: flex;
     justify-content: center;
@@ -10,8 +11,7 @@
 }
 
 @media (max-width:650px){
-    .email-status{
-        flex-direction: column;
-        font-size: 0.8em;
+    .email-status .emails{
+        display: none;
     }
 }

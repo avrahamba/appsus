@@ -17,11 +17,11 @@ export default {
         </router-link>
         <router-link to="/mister-email/deleted" exact>
             <i class="fa fa-trash"></i>
-            <div class="txt">Deleted Mail</div>
+            <div class="txt">Deleted</div>
         </router-link>
         <router-link to="/mister-email/sent" exact>
             <i class="fa fa-send"></i>
-            <div class="txt">Sent Mail</div>
+            <div class="txt">Sent</div>
         </router-link>
         <router-link to="/mister-email/drafts" exact>
             <i class="fa fa-edit"></i>

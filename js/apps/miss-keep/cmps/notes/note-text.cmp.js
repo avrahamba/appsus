@@ -4,23 +4,26 @@ import {emailService} from '../../../../services/mister-email/email.service.js';
 export default {
     template: `
     <div class="note-text open-note" :style="{'background-color': info.color}">
-        <input 
+        <div class="text">
+
+            <input 
             type="text" 
             v-if="edit" 
             placeholder = "Edit the title"
             v-model="infoCopy.title"
             >
-        <h3 v-else>{{info.title}}</h3>
-        <textarea 
-        v-if="edit"
-        placeholder="Edit the text"
-        v-model="infoCopy.txt" 
-        cols="31"
-        ></textarea>
-        <p v-else>
-            {{info.txt}}
-        </p>
-        <div class="color-btns">
+            <h3 v-else>{{info.title}}</h3>
+            <textarea 
+            v-if="edit"
+            placeholder="Edit the text"
+            v-model="infoCopy.txt" 
+            cols="31"
+            ></textarea>
+            <p v-else>
+                {{info.txt}}
+            </p>
+        </div>
+        <div class="btns">
         <template v-if="colorOpen">
                 <button @click.stop="colorSet('#ffd299')">
                     <i class="fa fa-tint" :style="{color: '#f8981d'}"></i>
@@ -41,9 +44,6 @@ export default {
             <button @click.stop="colorSet" v-else >
                 <i class="fa fa-paint-brush"></i>
             </button>
-        </div>
-        <div class="btns">
-
             <button class="send" @click="sendAsMail" :title="editSave">
                 <i class="fa fa-send"></i>
             </button>
@@ -106,6 +106,12 @@ export default {
             emailService.saveDraft({subject:this.infoCopy.title, body:this.infoCopy.txt})
             .then(draftId=>this.$router.push(`/mister-email/compose/${draftId}`))
         }
+    },
+    created() {
+        document.body.classList.add('open-modal')
+    },
+    destroyed() {
+        document.body.classList.remove('open-modal')
     },
 
 }

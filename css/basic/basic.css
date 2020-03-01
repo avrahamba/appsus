@@ -1,10 +1,16 @@
-body {
-    margin: 0;
-    /* background-color: #f1f9f9; */
+@font-face {
+    font-family: Lato;
+    src: url(/fonts/Lato-Regular.ttf);
 }
+
+
 html{
     font-family: 'Lato' ;
     color: #003571;
+}
+body {
+    margin: 0;
+    /* background-color: #f1f9f9; */
 }
 h1{
     all: unset;

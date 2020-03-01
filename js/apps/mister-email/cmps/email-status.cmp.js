@@ -4,7 +4,7 @@ import {eventBus,EVENT_CHANGE_STATUS_EMAIL} from '../../../services/event-bus.se
 export default {
     template:`
     <section class="email-status" v-if="status">
-        <div>Emails: {{status.allEmails}}</div>
+        <div class="emails">Emails: {{status.allEmails}}</div>
         <div>New: {{status.unreadedEmails}}</div>
 
     </section>

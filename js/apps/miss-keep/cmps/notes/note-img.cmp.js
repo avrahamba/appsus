@@ -25,7 +25,7 @@ export default {
         ></textarea>
 
         <p v-else>{{info.txt}}</p>
-        <div class="color-btns">
+        <div class="btns">
 
             <template v-if="colorOpen">
                 <button @click.stop="colorSet('#ffd299')">
@@ -47,8 +47,6 @@ export default {
             <button @click.stop="colorSet" v-else >
                 <i class="fa fa-paint-brush"></i>
             </button>
-        </div>
-    <div class="btns">
 
         <button class="edit" @click="startEditOrSave" :title="editSave">
             <i class="fa" :class="srcImgEdit"></i>
@@ -78,6 +76,7 @@ export default {
         }
     },
     created() {
+        document.body.classList.add('open-modal')
         this.infoCopy = JSON.parse(JSON.stringify(this.info))
     },
     computed: {
@@ -107,5 +106,8 @@ export default {
         pin(){
             noteService.setPin(this.id)
         }
+    },
+    destroyed() {
+        document.body.classList.remove('open-modal')
     },
 }

@@ -5,3 +5,9 @@
 .add-note-text textarea{
     margin-left: 2px;
 }
+
+@media (max-width:450px){
+    .add-note-text{
+        max-width: 10em;
+    }
+}

@@ -6,7 +6,7 @@ export default {
         type="text" 
         v-model="info.url" 
         @input="$emit('input',info)"
-        placeholder="Pleas enter URL of Youtube video"
+        placeholder="Pleas enter Youtube link"
         >
     </div>
     `,

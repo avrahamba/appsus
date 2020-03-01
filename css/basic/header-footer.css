@@ -9,14 +9,12 @@ header{
 nav.app-header{
     transition: 0.8s;
     height: 100%;
-    max-width: 800px;
+    max-width: 980px;
     right: 0;
     left: 0;
     margin: auto;
     display: flex;
     justify-content: space-between;
-}
-nav.app-header{
 }
 nav.app-header>ul{
     list-style: none;
@@ -61,8 +59,20 @@ nav.app-header .router-link-active h1{
 .logo a:visited{
     color: #003571;
 }
-@media (max-width: 650px){
+@media (max-width:1000px){
+    nav.app-header{
+        max-width: 800px;
+    }
+}
 
+@media (max-width: 650px){
+    header{
+        height: 5em;
+    }
+    nav.app-header{
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
     .screen{
         position: none;
     }
@@ -77,7 +87,7 @@ nav.app-header .router-link-active h1{
         opacity: 0.8;
     }
 
-    nav.app-header .router-link,nav.app-header .logo{
+    nav.app-header .router-link{
         display: none;
     }
     nav.app-header .bars i{
@@ -86,17 +96,25 @@ nav.app-header .router-link-active h1{
     nav.app-header .bars{
         height: 100%;
         display: flex;
-        min-width: 8em;
+        min-width: 3em;
         text-align: center;
         flex-direction: column;
         justify-content: center;
         text-decoration: none;
         color: #003571;
-        font-size: 3em;
+        font-size: 2em;
         cursor: pointer;
     }
-    nav.app-header{
-        justify-content: center;
+    nav.app-header .logo{
+        flex-direction: row;
+        align-items: center;
+        border: none;
+    }
+    nav.app-header ul{
+        display: none;
+    }
+    nav.app-header .logo h1{
+        font-size: 1.5rem;
     }
     .open-bar .fake-header{
         height: 9.25em;
@@ -106,29 +124,15 @@ nav.app-header .router-link-active h1{
         position: fixed;
         z-index: 4;
         width: 100%;
-    }
-    .open-bar nav.app-header .bars{
-        margin-top: 0.75em;
-        margin-bottom: 0.5em;
-    }
-    .open-bar header{
         height: fit-content;
         height: -moz-fit-content;
     }
     .open-bar nav.app-header{
         flex-direction: column;    
-    }
-    .open-bar nav.app-header .logo{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        font-size: 2em;
-        border: none;
-    }
-    .open-bar nav.app-header .logo img{
-        width: 4em;
-        margin-left: -1.5em;
+    } 
+    .open-bar nav.app-header .bars{
+        margin-top: 0.75em;
+        margin-bottom: 0.5em;
     }
     .open-bar nav.app-header ul{
         display: flex;
@@ -139,10 +143,35 @@ nav.app-header .router-link-active h1{
     .open-bar nav.app-header a{
         margin: 0;
     }
+    .open-bar nav.app-header .logo{
+        justify-content: center;
+    }
+    .open-bar nav.app-header h1{
+        font-size: 2rem;
+    }
+    .open-bar nav.app-header img{
+        max-width: 4em;
+    }
     .open-bar nav.app-header .router-link{
         display: block;
         border: none;
         font-size: 2em;
         margin-bottom: 0.5em;
     }
+}
+
+
+footer{
+    border-top: 4px solid #003571;
+    background-color: #f1f9f9;
+    height: 4.5em;
+    margin-top: 1.5em;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }

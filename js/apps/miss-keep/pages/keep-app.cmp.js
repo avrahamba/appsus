@@ -8,6 +8,8 @@ import noteImgPreview from '../cmps/preview/note-img-preview.cmp.js';
 import noteTodosPreview from '../cmps/preview/note-todos-preview.cmp.js';
 import noteVideoPreview from '../cmps/preview/note-video-preview.cmp.js';
 import addNote from '../cmps/add-note/add-note.cmp.js';
+import {eventBus, EVENT_CLOSE_MODAL} from '../../../services/event-bus.service.js';
+
 export default {
     template: `
     <section class="keep-app">
@@ -59,7 +61,7 @@ export default {
     created() {
         noteService.getNotes()
         .then(notes=>this.notes=notes)
-        
+        eventBus.$on(EVENT_CLOSE_MODAL,this.closeActiveNote)
     },
     methods: {
         removeNote(noteId){

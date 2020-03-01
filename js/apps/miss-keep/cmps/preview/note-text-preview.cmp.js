@@ -31,7 +31,7 @@ export default {
                 <i class="fa fa-paint-brush"></i>
             </button>
             <button @click.stop="pin" title="pin">
-                <i class="fa fa-map-pin"></i>
+                <i class="fa fa-map-pin" :style="{color: info.pined?'red':''}"></i>
             </button>
             <button @click.stop="$emit('remove')" title="remove">
                 <i class="fa fa-trash"></i>
@@ -56,6 +56,13 @@ export default {
             this.colorOpen = !this.colorOpen
         },
         pin(){
+            if(!this.info.pined){
+                window.scroll({
+                    top: 100,
+                    left: 100,
+                    behavior: 'smooth'
+                });
+            }
             noteService.setPin(this.id)
         }
     },

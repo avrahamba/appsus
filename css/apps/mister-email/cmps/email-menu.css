@@ -24,6 +24,7 @@
 @media (max-width:650px){
     .email-menu{
         flex-direction: row;
+        justify-content: space-around;
     }   
 
     .email-menu .router-link-active{

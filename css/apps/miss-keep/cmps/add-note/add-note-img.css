@@ -1,3 +1,11 @@
 .add-note-img{
     width: min-content;
 }
+
+
+
+@media (max-width:450px){
+    .add-note-img{
+        max-width: 10em;
+    }
+}
