@@ -1,0 +1,32 @@
+.home-page .links{
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+.home-page .router-link{
+    width: 20vw;
+    text-decoration: none;
+    color: #003571;
+}
+
+.home-page h1{
+    display: block;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.home-page img{
+    width: 100%;
+}
+
+@media (max-width:650px){
+    .home-page .router-link{
+        width: 70vw;
+        margin: auto;
+    } 
+    .home-page .links{
+        flex-direction: column;
+
+    }
+  
+}
