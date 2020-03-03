@@ -6,7 +6,7 @@ export default {
         <div class="text-container">
             <h3>{{info.title}}</h3>
             <p>
-                {{info.txt}}
+                {{showText}}
             </p>
         </div>
         <div class="btns">
@@ -46,6 +46,11 @@ export default {
     data() {
         return {
             colorOpen:false
+        }
+    },
+    computed: {
+        showText(){
+            return (this.info.txt.length<100)?this.info.txt:this.info.txt.substring(0,100)+'...'
         }
     },
     methods: {

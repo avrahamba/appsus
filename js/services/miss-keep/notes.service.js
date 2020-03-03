@@ -30,7 +30,17 @@ function createNotes() {
             id: utilService.makeId(),
             info: {
                 title: 'title test',
-                txt: 'test',
+                txt: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui velit accusamus illum quam soluta placeat eum excepturi animi, ab officia architecto, sunt culpa corporis ipsum non labore, enim rem adipisci! Lorem ipsum dolor sit amet consectetur adipisicing elit. At perspiciatis debitis nemo magni sed. Laborum assumenda amet, corrupti consequatur nam atque, magni sint laudantium, officia delectus beatae quia voluptates porro? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt quo qui neque quisquam voluptatem deserunt rem error tenetur, mollitia cupiditate veritatis suscipit debitis eveniet similique, maxime eaque maiores omnis molestias.',
+                color: '#c6f2c9',
+                pined: false
+            }
+        },
+        {
+            type: 'noteText',
+            id: utilService.makeId(),
+            info: {
+                title: 'Title',
+                txt: 'Your think',
                 color: '#c6f2c9',
                 pined: true
             }
@@ -66,6 +76,53 @@ function createNotes() {
                 url: 'https://www.youtube.com/embed/qhehT0uYySk',
                 color: '#e1f2fb',
                 pined: false
+            }
+        },
+        {
+            type: 'noteText',
+            id: utilService.makeId(),
+            info: {
+                title: 'title test',
+                txt: 'test',
+                color: '#c6f2c9',
+                pined: true
+            }
+        },
+        {
+            type: 'noteImg',
+            id: utilService.makeId(),
+            info: {
+                url: 'https://media.istockphoto.com/photos/lion-in-high-grass-picture-id494856046?k=6&m=494856046&s=612x612&w=0&h=Eb3uv75Vld5c_n22v8i5XktUPl60czynY4EVx7XMuV4=',
+                title: 'test title',
+                txt: 'text',
+                color: '#e1f2fb',
+                pined: false
+            }
+        },
+        {
+            type: 'noteTodos',
+            id: utilService.makeId(),
+            info: {
+                todoList: [
+                    { id: 0, txt: 'learn HTML', do: true },
+                    { id: 1, txt: 'learn CSS', do: true },
+                    { id: 2, txt: 'learn JS', do: true },
+                    { id: 3, txt: 'learn vue', do: true },
+                    { id: 4, txt: 'learn node.js', do: false },
+                    { id: 5, txt: 'learn create a wonderful project', do: false },
+                ],
+                color: '#e1f2fb',
+                pined: true
+
+            }
+        },
+        {
+            type: 'noteVideo',
+            id: utilService.makeId(),
+            info: {
+                url: 'https://www.youtube.com/embed/OrxmtDw4pVI',
+                color: '#e1f2fb',
+                pined: true
             }
         },
     ]
