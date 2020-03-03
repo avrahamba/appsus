@@ -1,5 +1,5 @@
-import {noteService} from '../../../../services/miss-keep/notes.service.js';
-import {emailService} from '../../../../services/mister-email/email.service.js';
+import { noteService } from '../../../../services/miss-keep/notes.service.js';
+import { emailService } from '../../../../services/mister-email/email.service.js';
 
 export default {
     template: `
@@ -62,53 +62,51 @@ export default {
         </div>
     </div>
     `,
-    props:{
+    props: {
         info: Object,
         id: String
     },
     data() {
         return {
-            edit:false,
-            infoCopy:null,
-            colorOpen:false
-        }
-    },
-    created() {
-        this.infoCopy = JSON.parse(JSON.stringify(this.info)) 
-    },
-    computed: {
-        srcImgEdit(){
-            if(this.edit) return 'fa-save'
-            return 'fa-edit'
-        },
-        editSave(){
-            if(this.edit) return 'Save'
-            return 'Edit'
-        }
-    },
-    methods: {
-        startEditOrSave(){
-            if(this.edit){
-                noteService.saveNote({id:this.id,info:this.infoCopy})
-            }
-            this.edit = !this.edit
-        },
-        colorSet(color){
-            if(typeof color === 'string'){
-                noteService.setColor(this.id, color)
-            }
-            this.colorOpen = !this.colorOpen
-        },
-        pin(){
-            noteService.setPin(this.id)
-        },
-        sendAsMail(){
-            emailService.saveDraft({subject:this.infoCopy.title, body:this.infoCopy.txt})
-            .then(draftId=>this.$router.push(`/mister-email/compose/${draftId}`))
+            edit: false,
+            infoCopy: null,
+            colorOpen: false
         }
     },
     created() {
         document.body.classList.add('open-modal')
+        this.infoCopy = JSON.parse(JSON.stringify(this.info))
+    },
+    computed: {
+        srcImgEdit() {
+            if (this.edit) return 'fa-save'
+            return 'fa-edit'
+        },
+        editSave() {
+            if (this.edit) return 'Save'
+            return 'Edit'
+        }
+    },
+    methods: {
+        startEditOrSave() {
+            if (this.edit) {
+                noteService.saveNote({ id: this.id, info: this.infoCopy })
+            }
+            this.edit = !this.edit
+        },
+        colorSet(color) {
+            if (typeof color === 'string') {
+                noteService.setColor(this.id, color)
+            }
+            this.colorOpen = !this.colorOpen
+        },
+        pin() {
+            noteService.setPin(this.id)
+        },
+        sendAsMail() {
+            emailService.saveDraft({ subject: this.infoCopy.title, body: this.infoCopy.txt })
+                .then(draftId => this.$router.push(`/mister-email/compose/${draftId}`))
+        }
     },
     destroyed() {
         document.body.classList.remove('open-modal')
